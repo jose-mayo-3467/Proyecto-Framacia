@@ -29,10 +29,16 @@ def open_new_window1():
     new_window1.title("Ventas Vitalis Farmacy")
     new_window1.geometry("1280x720")
 
+    # Label centrado en la parte superior
     label = tk.Label(new_window1, text="Ventas", font=("Arial", 14))
-    label.pack(pady=10)
-    
-    back_button = tk.Button(new_window1, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white")
+    label.pack(pady=20)  # Añadir espacio arriba del label
+
+    # Frame para centrar los botones verticalmente
+    frame = tk.Frame(new_window1)
+    frame.pack(expand=True)  # Expandir el frame para centrar verticalmente
+
+    # Botón de regreso (no se considera para el centrado vertical)
+    back_button = tk.Button(new_window1, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white", width=20, height=2)
     back_button.place(x=0, y=0)
 
     return new_window1
@@ -42,10 +48,16 @@ def open_new_window2():
     new_window2.title("Inventario Vitalis Farmacy")
     new_window2.geometry("1280x720")
 
+    # Label centrado en la parte superior
     label = tk.Label(new_window2, text="Inventario", font=("Arial", 14))
-    label.pack(pady=10)
+    label.pack(pady=20)  # Añadir espacio arriba del label
 
-    back_button = tk.Button(new_window2, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white")
+    # Frame para centrar los botones verticalmente
+    frame = tk.Frame(new_window2)
+    frame.pack(expand=True)  # Expandir el frame para centrar verticalmente
+
+    # Botón de regreso (no se considera para el centrado vertical)
+    back_button = tk.Button(new_window2, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white", width=20, height=2)
     back_button.place(x=0, y=0)
 
     return new_window2
@@ -55,10 +67,16 @@ def open_new_window4():
     new_window4.title("Reporte de Ventas")
     new_window4.geometry("1280x720")
 
+    # Label centrado en la parte superior
     label = tk.Label(new_window4, text="Reporte de Ventas", font=("Arial", 14))
-    label.pack(pady=10)
+    label.pack(pady=20)  # Añadir espacio arriba del label
 
-    back_button = tk.Button(new_window4, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white")
+    # Frame para centrar los botones verticalmente
+    frame = tk.Frame(new_window4)
+    frame.pack(expand=True)  # Expandir el frame para centrar verticalmente
+
+    # Botón de regreso (no se considera para el centrado vertical)
+    back_button = tk.Button(new_window4, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white", width=20, height=2)
     back_button.place(x=0, y=0)
 
     return new_window4
@@ -68,10 +86,16 @@ def open_new_window5():
     new_window5.title("Adquisición de Productos")
     new_window5.geometry("1280x720")
 
+    # Label centrado en la parte superior
     label = tk.Label(new_window5, text="Adquisición de Productos", font=("Arial", 14))
-    label.pack(pady=10)
+    label.pack(pady=20)  # Añadir espacio arriba del label
 
-    back_button = tk.Button(new_window5, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white")
+    # Frame para centrar los botones verticalmente
+    frame = tk.Frame(new_window5)
+    frame.pack(expand=True)  # Expandir el frame para centrar verticalmente
+
+    # Botón de regreso (no se considera para el centrado vertical)
+    back_button = tk.Button(new_window5, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white", width=20, height=2)
     back_button.place(x=0, y=0)
 
     return new_window5
@@ -81,16 +105,22 @@ def open_new_window3():
     new_window3.title("Reporte y Analisis Vitalis Farmacy")
     new_window3.geometry("1280x720")
 
+    # Label centrado en la parte superior
     label = tk.Label(new_window3, text="Reportes y Análisis", font=("Arial", 14))
-    label.pack(pady=10)
+    label.pack(pady=20)  # Añadir espacio arriba del label
 
-    sales_report_button = tk.Button(new_window3, text="Reporte de Ventas", fg="White", bg="Red", font=("Arial", 14), command=lambda: open_new_window(open_new_window4))
+    # Frame para centrar los botones verticalmente
+    frame = tk.Frame(new_window3)
+    frame.pack(expand=True)  # Expandir el frame para centrar verticalmente
+
+    sales_report_button = tk.Button(frame, text="Reporte de Ventas", fg="White", bg="Red", font=("Arial", 14), width=20, height=2, command=lambda: open_new_window(open_new_window4))
     sales_report_button.pack(pady=10)
 
-    product_acquisition_button = tk.Button(new_window3, text="Adquisición de Productos", fg="White", bg="Red", font=("Arial", 14), command=lambda: open_new_window(open_new_window5))
+    product_acquisition_button = tk.Button(frame, text="Adquisición de Productos", fg="White", bg="Red", font=("Arial", 14), width=20, height=2, command=lambda: open_new_window(open_new_window5))
     product_acquisition_button.pack(pady=10)
 
-    back_button = tk.Button(new_window3, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white")
+    # Botón de regreso (no se considera para el centrado vertical)
+    back_button = tk.Button(new_window3, text="←", command=close_current_window, font=("Arial", 12), bg="red", fg="white", width=20, height=2)
     back_button.place(x=0, y=0)
 
     return new_window3
@@ -104,22 +134,26 @@ def main():
     # Añadir la ventana principal a la pila
     window_stack.append(root)
 
-    # Crear y mostrar una etiqueta
+    # Label centrado en la parte superior
     label = tk.Label(root, text="Vitalis Farmacy", font=("Arial", 14))
-    label.pack(pady=10)
+    label.pack(pady=20)  # Añadir espacio arriba del label
+
+    # Frame para centrar los botones verticalmente
+    frame = tk.Frame(root)
+    frame.pack(expand=True)  # Expandir el frame para centrar verticalmente
 
     # Crear y mostrar botones para abrir nuevas ventanas
-    button1 = tk.Button(root, text="Ventas", fg="White", bg="Red", font=("Arial", 16), command=lambda: open_new_window(open_new_window1))
+    button1 = tk.Button(frame, text="Ventas", fg="White", bg="Red", font=("Arial", 16), width=20, height=2, command=lambda: open_new_window(open_new_window1))
     button1.pack(pady=10)
 
-    button2 = tk.Button(root, text="Inventario", fg="White", bg="Red", font=("Arial", 16), command=lambda: open_new_window(open_new_window2))
+    button2 = tk.Button(frame, text="Inventario", fg="White", bg="Red", font=("Arial", 16), width=20, height=2, command=lambda: open_new_window(open_new_window2))
     button2.pack(pady=10)
 
-    button3 = tk.Button(root, text="Reportes y Análisis", fg="White", bg="Red", font=("Arial", 16), command=lambda: open_new_window(open_new_window3))
+    button3 = tk.Button(frame, text="Reportes y Análisis", fg="White", bg="Red", font=("Arial", 16), width=20, height=2, command=lambda: open_new_window(open_new_window3))
     button3.pack(pady=10)
 
-    # Botón de regreso en la esquina superior izquierda
-    back_button = tk.Button(root, text="Cerrar", command=root.destroy, font=("Arial", 12), bg="red", fg="white")
+    # Botón de regreso (no se considera para el centrado vertical)
+    back_button = tk.Button(root, text="Cerrar", command=root.destroy, font=("Arial", 12), bg="red", fg="white", width=20, height=2)
     back_button.place(x=0, y=0)
 
     # Iniciar el bucle principal de la aplicación
